@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Members List</title>
+</head>
+
+<body>
+    <% if (members != null) { %>
+        <% for (let member of members) { %> 
+    <div class="cart">
+        <h3>Member's Detail</h3>
+    <div class="cartText"> 
+    <p> <%= member.name %> </p>
+     <p> <%= member.email %> </p>
+     <p> <%= member.phone %> </p>
+     <p> <%= member.address %> </p>
+     <p></p>
+     <p></p>   
+    </div>
+
+    </div>
+    <% } %>
+
+    <% } else { %>
+        <h2>No Users Found<h2>
+        <% } %>
+
+</body>
+</html>
+
+<style>
+    html{
+        padding:0%;
+        margin: 0%;
+    }
+    body
+    {
+     
+        background: gray;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    h3{
+        text-align: center;
+        padding: 10px;
+    }
+    .cartText
+    {
+        height: 200px;
+        padding-left: 6px;
+    }
+    .cart
+    {
+        background: honeydew;
+         display: flex;
+         flex-direction: column;
+        border-radius: 5px;
+        margin: 3px;
+        width: 250px;
+        height: 300px; 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+      
+    
+    </style>
+    
